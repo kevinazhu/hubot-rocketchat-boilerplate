@@ -1,19 +1,23 @@
 {
-  "name": "hubot-rocketchat-boilerplate",
-  "version": "0.0.0-develop",
-  "description": "An example Hubot demonstrating usage of the Rocket.Chat adaptor.",
+  "name": "hubot-rocketchat-rss",
+  "version": "0.0.1",
+  "description": "A Hubot to support RSS feeds",
   "main": "bin/hubot",
-  "repository": "git@github.com:RocketChat/hubot-rocketchat-boilerplate.git",
-  "author": "Tim Kinnane <tim.kinnane@rocket.chat>",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/kevinazhu/hubot-rocketchat-rss.git"
+  },
+  "author": "Kevin Zhu <kevinazhu@gmail.com>",
   "license": "MIT",
   "private": false,
   "keywords": [
     "hubot",
     "rocketchat",
     "chatbot",
-    "chat"
+    "chat",
+    "rss"
   ],
-   "engines": {
+  "engines": {
     "node": ">=8.x",
     "npm": ">=5.x"
   },
@@ -25,9 +29,15 @@
   "dependencies": {
     "coffeescript": "^2.2.2",
     "hubot": "3",
-    "hubot-rocketchat": "rocketchat/hubot-rocketchat"
+    "hubot-mongodb-brain-kzhu": "kevinazhu/hubot-mongodb-brain-kzhu",
+    "hubot-rocketchat": "rocketchat/hubot-rocketchat",
+    "hubot-rss-kzhu": "kevinazhu/hubot-rss-kzhu"
   },
   "devDependencies": {
     "dotenv": "^5.0.1"
+  },
+  "volta": {
+    "node": "16.13.2",
+    "npm": "8.4.0"
   }
 }
