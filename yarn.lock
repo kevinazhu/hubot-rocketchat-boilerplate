@@ -656,7 +656,7 @@ http-signature@~1.2.0:
 
 hubot-mongodb-brain-kzhu@kevinazhu/hubot-mongodb-brain-kzhu:
   version "0.0.1"
-  resolved "https://codeload.github.com/kevinazhu/hubot-mongodb-brain-kzhu/tar.gz/ba448060a409653217fdcf7503f6fbc4c130d1e2"
+  resolved "https://codeload.github.com/kevinazhu/hubot-mongodb-brain-kzhu/tar.gz/ce63160e85e8d3d33cb067c5253438e03eb2388f"
   dependencies:
     mongodb "^3.7.3"
     mongodb-redact "^0.2.2"
