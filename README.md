@@ -1,4 +1,4 @@
-# hubot-rocketchat-boilerplate
+# hubot-rocketchat-rss
 Create and run a Rocket.Chat bot in under two minutes. 
 
 ### NB: THIS IS A WORK IN PROGRESS
