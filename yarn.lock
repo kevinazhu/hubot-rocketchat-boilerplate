@@ -670,7 +670,7 @@ hubot-rocketchat@rocketchat/hubot-rocketchat:
 
 hubot-rss-kzhu@kevinazhu/hubot-rss-kzhu:
   version "0.0.1"
-  resolved "https://codeload.github.com/kevinazhu/hubot-rss-kzhu/tar.gz/53ec0e3b9e790c4ffedef609f6a656aa655150b0"
+  resolved "https://codeload.github.com/kevinazhu/hubot-rss-kzhu/tar.gz/77be5e447f00f881e475f3f6f15d632298f7e12f"
   dependencies:
     async "^3.2.3"
     bluebird "^3.7.2"
