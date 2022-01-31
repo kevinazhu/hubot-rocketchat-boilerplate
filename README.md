@@ -23,7 +23,7 @@ Create and run a Rocket.Chat bot in under two minutes.
 ```
 git clone https://github.com/kevinazhu/hubot-rocketchat-rss
 cd hubot-rocketchat-rss
-npm install
+yarn
 ```
 Create a _.env_ file with content:
 
@@ -33,15 +33,23 @@ export ROCKETCHAT_USER=mybotuser
 export ROCKETCHAT_PASSWORD=mypassword
 export ROCKETCHAT_ROOM=general
 export ROCKETCHAT_USESSL=true
+
+export HUBOT_RSS_INTERVAL=600
+export HUBOT_RSS_HEADER=:sushi:
+export HUBOT_RSS_LIMIT_ON_ADD=5
+export HUBOT_RSS_ADMIN_USERS="user1,user2"
+
+export MONGODB_URL=mongodb://localhost:27017
+export MONGODB_DBNAME=hubot-brain               # This is wherever you want to store the bot's db info
+export MONGODB_SAVE_INTERVAL=60
 ```
 
-Adjust the content to fit your server and user credentials. Make sure `myuser` has **BOT role** on the server, if you don't know what that means, ask your server administrator to set it up for you.
+Adjust the content to fit your server and user credentials. Make sure `mybotuser` has **BOT role** on the server, if you don't know what that means, ask your server administrator to set it up for you.
 
 Then run the bot:
 
 ```
-source .env
-bin/hubot
+source .env && ./bin/hubot
 ```
 
 On the server, login as a regular user (not the BOT user), go to GENERAL, and try:
