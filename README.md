@@ -11,7 +11,7 @@ Create and run a Rocket.Chat bot in under two minutes.
 [hubot-rocketchat]: https://github.com/rocketchat/hubot-rocketchat
 [sdk]: https://github.com/rocketchat/Rocket.Chat.js.SDK
 [contributing]: https://rocket.chat/docs/contributing/developing/
-[issues]: https://github.com/RocketChat/hubot-rocketchat-boilerplate/issues
+[issues]: https://github.com/kevinazhu/hubot-rocketchat-rss/issues
 [generator]: https://github.com/hubotio/generator-hubot
 [deployment]: https://hubot.github.com/docs/deploying/
 [dotenv]: https://www.npmjs.com/package/dotenv
@@ -21,8 +21,8 @@ Create and run a Rocket.Chat bot in under two minutes.
 ## Quick Start
 
 ```
-git clone https://github.com/RocketChat/hubot-rocketchat-boilerplate
-cd hubot-rocketchat-boilerplate
+git clone https://github.com/kevinazhu/hubot-rocketchat-rss
+cd hubot-rocketchat-rss
 npm install
 ```
 Create a _.env_ file with content:
