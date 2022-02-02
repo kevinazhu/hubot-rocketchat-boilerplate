@@ -1,22 +1,9 @@
 # hubot-rocketchat-rss
-Create and run a Rocket.Chat bot in under two minutes. 
 
-### NB: THIS IS A WORK IN PROGRESS
+Rocket.Chat bot for RSS Feeds and more.
 
-> Please do not attempt to implement until this message is removed
->
-> The `-develop` tag will also be removed from the package file.
-
-[hubot]: https://github.com/hubotio/hubot
-[hubot-rocketchat]: https://github.com/rocketchat/hubot-rocketchat
-[sdk]: https://github.com/rocketchat/Rocket.Chat.js.SDK
-[contributing]: https://rocket.chat/docs/contributing/developing/
-[issues]: https://github.com/kevinazhu/hubot-rocketchat-rss/issues
-[generator]: https://github.com/hubotio/generator-hubot
-[deployment]: https://hubot.github.com/docs/deploying/
-[dotenv]: https://www.npmjs.com/package/dotenv
-[newrepo]: https://help.github.com/articles/creating-a-new-repository/
-[env]: https://github.com/RocketChat/hubot-rocketchat#configuring-your-bot
+Utilizes modified/fixed versions of [Hubot Mongodb Brain][hubot-mongodb-brain] 
+and [Hubot RSS Reader][hubot-rss-reader]
 
 ## Quick Start
 
@@ -25,8 +12,8 @@ git clone https://github.com/kevinazhu/hubot-rocketchat-rss
 cd hubot-rocketchat-rss
 yarn
 ```
-Create a _.env_ file with content:
 
+Create a _.env_ file with content:
 ```
 export ROCKETCHAT_URL=myserver.com
 export ROCKETCHAT_USER=mybotuser
@@ -40,20 +27,23 @@ export HUBOT_RSS_LIMIT_ON_ADD=5
 export HUBOT_RSS_ADMIN_USERS="user1,user2"
 
 export MONGODB_URL=mongodb://localhost:27017
-export MONGODB_DBNAME=hubot-brain               # This is wherever you want to store the bot's db info
+export MONGODB_DBNAME=hubot-brain
 export MONGODB_SAVE_INTERVAL=60
 ```
 
 Adjust the content to fit your server and user credentials. Make sure `mybotuser` has **BOT role** on the server, if you don't know what that means, ask your server administrator to set it up for you.
 
 Then run the bot:
-
 ```
 source .env && ./bin/hubot
 ```
 
-On the server, login as a regular user (not the BOT user), go to GENERAL, and try:
 
+## Communicating with the Bot
+
+### Test Commands
+
+On the server, login as a regular user (not the BOT user), go to GENERAL, and try:
 ```
 mybotuser what time is it
 ```
@@ -63,52 +53,27 @@ OR
 ```
 mybotuser rc version
 ```
-`< TBD:  insert sample run screenshot >`
 
-You can examine the source code of these two bots under the `/scripts` directory, where you can add your own bot scripts written in Javascript.
+### RSS Commands
 
-## Stable Versions
+Add an rss feed with
+```
+mybotuser rss add RSS_URL
+```
 
-This demo uses [Hubot][hubot] v3 and [Rocketchat.Chat adapter][hubot-rocketchat]
-v2, using the new [Rocketchat Node.js SDK][[sdk] for Rocket.Chat instances
-0.60.0 onward.
+This will make the bot print the last 5 entries, and then begin to monitor that RSS feed.
 
-Versions of `hubot-rocketchat` prior to v2 are incompatible with Hubot v3
+For a full list of commands, check out https://github.com/kevinazhu/hubot-rss-kzhu
 
-Due to the v1 adapter's use of Coffeescript, extending classes in es6
-javascript is troublesome.
+## Docker
 
-This bot is written in es6 and intended to run on node v8+. To run a bot on
-older versions of node would require compiling with babel to use the full es6
-feature set.
+You can also run this bot in a docker container.
+Simply create the above .env file and then run
+```
+docker-compose up
+```
 
-Older versions of the adaptor (v0.*) are also incompatible with more recent
-versions of Rocket.Chat (v0.35+). Please report an issue if you find specific 
-version mismatches and we'll update this document.
-
-## More Details
-
-This is a boilerplate for making your own bots with Hubot and Rocket.Chat.
-
-### Running Locally
-
-You can run with the shell adapter just to test
-
-1. Run `yarn` or `npm install` to install dependencies
-2. Use the `yarn shell` script to start the bot with shell adaptor
-3. Say `hubot help` to see what it can do
-
-When you're ready to connect the bot to an instance of Rocket.Chat
-
-1. Create a user for the bot, with the role _bot_
-2. Create an `./.env` file with the user and connection settings
-3. Run `yarn local` script to connect to your local Rocket.Chat
-
-The `local` npm script will read in the env file, so you can populate and modify
-those settings easily (see [configuration](#configuration)). In production, they
-should be pre-populated in the server environment.
-
-### Running in Production
+## Running in Production
 
 There are executables for different environments that all run the Hubot binary.
 
@@ -127,6 +92,8 @@ required when working locally).
 
 More information on [deployment configs][deployment] here.
 
+## Script Development
+
 ### Adding Scripts
 
 Scripts can be added to the `./scripts` folder, or by installing node packages
@@ -142,14 +109,7 @@ prefixed, or without the bot's name if in a DM.
 - `what time is it` or `what's the time` - Tells you the time
 - `rc version` - Gives you version info for Rocket.Chat and Hubot (two messages)
 
-## Configuration
 
-When running locally, we've used [`dotenv`][dotenv] to load configs from the
-`./.env` file. That makes it easy for setting environment variables.
-
-Please see [adapter docs for source of truth on environment variables][env].
-
-## Contributions Welcome
-
-Please see [our documentation on contributing][contributing], then
-[visit the issues][issues] to share your needs or ideas.
+[hubot-mongodb-brain]: https://github.com/kevinazhu/hubot-mongodb-brain-kzhu
+[hubot-rss-reader]: https://github.com/kevinazhu/hubot-rss-kzhu
+[deployment]: https://hubot.github.com/docs/deploying/
