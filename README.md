@@ -63,7 +63,7 @@ mybotuser rss add RSS_URL
 
 This will make the bot print the last 5 entries, and then begin to monitor that RSS feed.
 
-For a full list of commands, check out https://github.com/kevinazhu/hubot-rss-kzhu
+For a full list of commands, check out the [Hubot RSS Reader][hubot-rss-reader] external script.
 
 ## Docker
 
