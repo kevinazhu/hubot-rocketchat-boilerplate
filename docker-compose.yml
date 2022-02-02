@@ -4,4 +4,4 @@ services:
     build: .
     restart: always
     env_file:
-      - .env.dev
+      - .env
