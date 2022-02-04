@@ -1,6 +1,6 @@
 {
   "name": "hubot-rocketchat-rss",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A Hubot to support RSS feeds",
   "main": "bin/hubot",
   "repository": {
@@ -31,7 +31,7 @@
     "hubot": "3",
     "hubot-mongodb-brain-kzhu": "kevinazhu/hubot-mongodb-brain-kzhu",
     "hubot-rocketchat": "rocketchat/hubot-rocketchat",
-    "hubot-rss-kzhu": "kevinazhu/hubot-rss-kzhu"
+    "hubot-rss-kzhu": "kevinazhu/hubot-rss-kzhu#v0.0.2"
   },
   "devDependencies": {
     "dotenv": "^5.0.1"
