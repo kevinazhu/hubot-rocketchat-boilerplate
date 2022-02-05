@@ -1,4 +1,4 @@
 [
-    "hubot-rss-kzhu",
-    "hubot-mongodb-brain-kzhu"
+    "@kevinazhu/hubot-rss-reader",
+    "@kevinazhu/hubot-mongodb-brain"
 ]

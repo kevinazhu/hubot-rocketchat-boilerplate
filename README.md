@@ -110,6 +110,6 @@ prefixed, or without the bot's name if in a DM.
 - `rc version` - Gives you version info for Rocket.Chat and Hubot (two messages)
 
 
-[hubot-mongodb-brain]: https://github.com/kevinazhu/hubot-mongodb-brain-kzhu
-[hubot-rss-reader]: https://github.com/kevinazhu/hubot-rss-kzhu
+[hubot-mongodb-brain]: https://github.com/kevinazhu/hubot-mongodb-brain
+[hubot-rss-reader]: https://github.com/kevinazhu/hubot-rss-reader
 [deployment]: https://hubot.github.com/docs/deploying/

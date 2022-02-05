@@ -2,6 +2,34 @@
 # yarn lockfile v1
 
 
+"@kevinazhu/hubot-mongodb-brain@^1.0.0":
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/@kevinazhu/hubot-mongodb-brain/-/hubot-mongodb-brain-1.0.1.tgz#2ae9ecc4892f9d3041dbf51eda706b6c0fbd63ca"
+  integrity sha512-m3nwKZS0lB46tLvdj15ZzRLqrrMTcQD8HTHrgc041GDVykHjm2vcescSzHiuTm8ENq3P5GVtkFRmcD7wWBtKKA==
+  dependencies:
+    mongodb "^3.7.3"
+    mongodb-redact "^0.2.2"
+
+"@kevinazhu/hubot-rss-reader@^1.0.1":
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/@kevinazhu/hubot-rss-reader/-/hubot-rss-reader-1.0.1.tgz#6b3cc7f2e50587013f874d6c9f7831b581a0f593"
+  integrity sha512-IZY+tIAWTKRFKqVeId667XOs+YgTJQGVx+QUEzWmwduSXOfb+4yMSNYDBtlPr4QDbhYATbfYv+Rd0JEtgkfgTg==
+  dependencies:
+    async "^3.2.3"
+    bluebird "^3.7.2"
+    cheerio "^0.22.0"
+    debug "^4.3.3"
+    feedparser "^2.2.10"
+    find-rss "^1.6.4"
+    html-entities "^2.3.2"
+    iconv "^3.0.1"
+    image-downloader "^4.0.3"
+    irc-colors "^1.5.0"
+    link-preview-js "^2.1.10"
+    lodash "^4.17.21"
+    node-libcurl "^2.3.4"
+    request "^2.88.2"
+
 "@mapbox/node-pre-gyp@1.0.5":
   version "1.0.5"
   resolved "https://registry.yarnpkg.com/@mapbox/node-pre-gyp/-/node-pre-gyp-1.0.5.tgz#2a0b32fcb416fb3f2250fd24cb2a81421a4f5950"
@@ -907,38 +935,12 @@ https-proxy-agent@^5.0.0:
     agent-base "6"
     debug "4"
 
-hubot-mongodb-brain-kzhu@kevinazhu/hubot-mongodb-brain-kzhu:
-  version "0.0.1"
-  resolved "https://codeload.github.com/kevinazhu/hubot-mongodb-brain-kzhu/tar.gz/e2a25297469730c905d68fe0ba5cce55bc6ec4b0"
-  dependencies:
-    mongodb "^3.7.3"
-    mongodb-redact "^0.2.2"
-
 hubot-rocketchat@rocketchat/hubot-rocketchat:
   version "2.0.0-development"
   resolved "https://codeload.github.com/rocketchat/hubot-rocketchat/tar.gz/c45faf61a47caba84ed1afb669313ff86150caa7"
   dependencies:
     "@rocket.chat/sdk" "^0.2.1"
     hubot "3"
-
-hubot-rss-kzhu@kevinazhu/hubot-rss-kzhu#v0.0.2:
-  version "0.0.2"
-  resolved "https://codeload.github.com/kevinazhu/hubot-rss-kzhu/tar.gz/332ba56d6bc2362f6e3a1586315d9722e42bfde0"
-  dependencies:
-    async "^3.2.3"
-    bluebird "^3.7.2"
-    cheerio "^0.22.0"
-    debug "^4.3.3"
-    feedparser "^2.2.10"
-    find-rss "^1.6.4"
-    html-entities "^2.3.2"
-    iconv "^3.0.1"
-    image-downloader "^4.0.3"
-    irc-colors "^1.5.0"
-    link-preview-js "^2.1.10"
-    lodash "^4.17.21"
-    node-libcurl "^2.3.4"
-    request "^2.88.2"
 
 hubot@3:
   version "3.3.2"

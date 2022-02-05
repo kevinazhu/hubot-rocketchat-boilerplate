@@ -1,7 +1,7 @@
 {
-  "name": "hubot-rocketchat-rss",
-  "version": "0.0.2",
-  "description": "A Hubot to support RSS feeds",
+  "name": "@kevinazhu/hubot-rocketchat-rss",
+  "version": "1.0.0",
+  "description": "A Hubot to check RSS feeds",
   "main": "bin/hubot",
   "repository": {
     "type": "git",
@@ -27,11 +27,11 @@
     "local": "node -r dotenv/config node_modules/hubot/bin/hubot.js -a rocketchat"
   },
   "dependencies": {
+    "@kevinazhu/hubot-mongodb-brain": "^1.0.0",
+    "@kevinazhu/hubot-rss-reader": "^1.0.1",
     "coffeescript": "^2.2.2",
     "hubot": "3",
-    "hubot-mongodb-brain-kzhu": "kevinazhu/hubot-mongodb-brain-kzhu",
-    "hubot-rocketchat": "rocketchat/hubot-rocketchat",
-    "hubot-rss-kzhu": "kevinazhu/hubot-rss-kzhu#v0.0.2"
+    "hubot-rocketchat": "rocketchat/hubot-rocketchat"
   },
   "devDependencies": {
     "dotenv": "^5.0.1"
